@@ -58,4 +58,7 @@
     <Config Name="PGID" Target="PGID" Default="1000"
             Description="Group ID for file permissions"
             Type="Variable" Display="advanced" Required="false" Mask="false"/>
+    <Config Name="API URL Override" Target="VITE_BASE_API_URL" Default=""
+            Description="Override the API base URL (e.g., behind a reverse proxy). Leave empty to auto-detect from browser URL."
+            Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
