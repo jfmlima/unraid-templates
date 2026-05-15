@@ -7,6 +7,12 @@ chown abc:abc /config
 # Create nginx run directory
 mkdir -p /run/nginx
 
+# Apply configurable ports to nginx config
+PORT="${PORT:-8080}"
+API_PORT="${API_PORT:-8000}"
+sed -i "s/__PORT__/${PORT}/g; s/__API_PORT__/${API_PORT}/g" \
+    /etc/nginx/http.d/default.conf
+
 # Configure frontend API URL
 # Default: window.location.origin sends API requests through the nginx reverse proxy
 # Override: set VITE_BASE_API_URL env var to point at a custom API endpoint
