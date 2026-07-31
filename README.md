@@ -27,7 +27,7 @@ For mDNS device discovery to work properly, you may need to use **host** network
 **Configuration:**
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `SHELLY_SECRET_KEY` | Encryption key for credentials (optional) | Auto-generated |
+| `SHELLY_SECRET_KEY` | Encryption key for stored credentials and backups. Generate one with `openssl rand -base64 32 \| tr '+/' '-_'` and keep it, since changing it makes what is already stored unreadable | (required) |
 | `LOG_LEVEL` | Logging verbosity | `info` |
 | `PUID` | User ID for file permissions | `1000` |
 | `PGID` | Group ID for file permissions | `1000` |
