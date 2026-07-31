@@ -29,6 +29,7 @@ For mDNS device discovery to work properly, you may need to use **host** network
 |----------|-------------|---------|
 | `SHELLY_SECRET_KEY` | Encryption key for stored credentials and backups. Generate one with `openssl rand -base64 32 \| tr '+/' '-_'` and keep it, since changing it makes what is already stored unreadable | (required) |
 | `LOG_LEVEL` | Logging verbosity | `info` |
+| `SHELLY_FIRMWARE_ADVERTISED_BASE_URL` | Address your devices can reach this container on, e.g. `http://192.168.1.50:8080`. Only needed to update a device that has no internet access, where the manager downloads the firmware once and the device fetches it from here | (none) |
 | `PUID` | User ID for file permissions | `1000` |
 | `PGID` | Group ID for file permissions | `1000` |
 
