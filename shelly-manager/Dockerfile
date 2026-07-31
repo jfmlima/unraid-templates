@@ -37,7 +37,9 @@ RUN python3 -m venv .venv \
 
 ENV PATH="/app/.venv/bin:$PATH" \
     PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1
+    PYTHONUNBUFFERED=1 \
+    SHELLY_DATA_DIR=/config \
+    SHELLY_FIRMWARE_DIR=/config/firmware
 
 # Copy rootfs (s6 services, nginx config)
 COPY rootfs /

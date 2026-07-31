@@ -44,7 +44,7 @@
             Description="Web interface and API port"
             Type="Port" Display="always" Required="true" Mask="false"/>
     <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/shelly-manager"
-            Mode="rw" Description="Path for persistent data (database)"
+            Mode="rw" Description="Path for persistent data (database and cached firmware)"
             Type="Path" Display="always" Required="true" Mask="false"/>
     <Config Name="Secret Key" Target="SHELLY_SECRET_KEY" Default=""
             Description="Encryption key for stored credentials. Generate with: python3 -c 'from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())'"
